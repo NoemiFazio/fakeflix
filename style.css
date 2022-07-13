@@ -1,0 +1,194 @@
+body {
+  background-color: rgba(0, 0, 0, 0.915);
+  font-family: "Mukta", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+.icon2 {
+  display: none;
+}
+.main-header {
+  background-image: linear-gradient(
+      rgba(15, 10, 10, 0.949),
+      rgba(0, 0, 0, 0.285),
+      rgba(15, 10, 10, 0.862)
+    ),
+    url("./img/Netflix-Background.jpg");
+  height: 350px;
+  background-size: cover;
+  /* background-position-y: bottom; */
+  /* border: 1px solid rgba(255, 255, 255, 0.842); */
+  /* margin-bottom: 30px; */
+}
+.main-header .icon {
+  height: 50px;
+  width: 30px;
+  margin: 5px 0px 0px 5px;
+}
+
+.main-header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 37px;
+  padding: 0;
+  list-style-type: none;
+  font-weight: bold;
+  margin: 0px;
+}
+.main-header ul a {
+  color: rgba(245, 245, 245, 0.818);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.popular-series {
+  /* border: 1px solid white; */
+  /* margin: 20px 0px; */
+  color: rgba(245, 245, 245, 0.818);
+  margin-bottom: 30px;
+}
+
+.popular-series h2 {
+  margin: 20px 0px 0px 27px;
+  font-size: 18px;
+}
+
+.series-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  /* margin: 4px, 4px;
+    padding: 4px;
+  
+    width: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: nowrap; */
+}
+.card {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: rgba(245, 245, 245, 0.818);
+}
+
+.popular-series-wrapper img {
+  height: 200px;
+  width: 150px;
+
+  /* margin: 0px 0px 0px; */
+  border-radius: 10px;
+  /* padding: 0px 10px 15px; */
+}
+.popular-series-wrapper h5 {
+  text-align: center;
+  margin: 0px;
+  width: 130px;
+}
+
+.main-footer {
+  display: flex;
+  justify-content: center;
+}
+.main-footer img {
+  width: 20px;
+  height: 20px;
+  margin: 0 20px;
+  filter: invert(80%);
+}
+
+@media only screen and (min-width: 768px) {
+  .main-header {
+    height: 370px;
+
+    /* margin-bottom: 30px; */
+  }
+  .icon {
+    display: none;
+  }
+  .icon2 {
+    display: list-item;
+    margin-top: 10px;
+    height: 80px;
+    width: 270px;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-header ul {
+    justify-content: space-evenly;
+    gap: 45px;
+
+    padding: 30px 0px 0px 0px;
+    font-size: 15px;
+  }
+  .main-header li {
+    margin-left: 40px;
+  }
+
+  .popular-series h2 {
+    font-size: 30px;
+  }
+  .popular-series-wrapper img {
+    height: 240px;
+    width: 170px;
+    margin: 0px 10px 25px;
+    cursor: pointer;
+  }
+
+  .main-footer img {
+    width: 22px;
+    height: 22px;
+    margin: 0px 30px 0px 30px;
+    filter: invert(80%);
+  }
+  .main-footer img:hover {
+    filter: invert(60%);
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .icon2 {
+    display: list-item;
+    margin: 15px 0px 0px 15px;
+    height: 100px;
+    width: 300px;
+  }
+
+  .main-header ul {
+    justify-content: space-evenly;
+    gap: 45px;
+
+    padding: 30px 25px 0px 0px;
+    font-size: 15px;
+  }
+  .main-header li {
+    font-size: 20px;
+  }
+
+  .main-header ul a:hover {
+    color: rgb(220 26 40);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .series-card img {
+    transition: transform 0.55s;
+  }
+  .series-card img:hover {
+    transform: scale(1.1);
+    filter: grayscale(45%);
+  }
+  .main-footer img {
+    width: 22px;
+    height: 22px;
+    margin: 0px 40px 0px 40px;
+  }
+}
