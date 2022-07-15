@@ -12,11 +12,14 @@ fetch(
   .then((res) => {
     // console.log(res);
 
+    const overview =
+      res.overview || "No description avaiable, sorry for the trouble.";
+
     let seriesDescription = `<div class="description-img">
     <img src="${imgFirstLinkPart}${res.poster_path}">
     </div>
     <div class="description-p">
-    <p>${res.overview}</p>
+    <p>${overview}</p>
     <h6 class"tv-series-rating" ">Rating: ${res.vote_average}/10</h6>
     </div>
     
