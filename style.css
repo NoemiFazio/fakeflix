@@ -1,3 +1,7 @@
+html,
+body {
+  scroll-behavior: smooth;
+}
 body {
   background-color: rgba(0, 0, 0, 0.915);
   font-family: "Mukta", sans-serif;
@@ -40,6 +44,10 @@ body {
   color: rgba(245, 245, 245, 0.818);
   text-decoration: none;
   font-weight: bold;
+}
+.loading {
+  display: block;
+  margin: auto;
 }
 
 .popular-series {

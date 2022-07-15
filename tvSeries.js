@@ -2,7 +2,7 @@ const movieId = window.location.search.substr(1).slice(3);
 console.log(movieId);
 
 const imgFirstLinkPart = "https://image.tmdb.org/t/p/w500";
-
+const loadingEl = document.querySelector(".loading");
 const description = document.querySelector(".description");
 //esempio per video https://api.themoviedb.org/3/tv/63174/videos?api_key=b9d6f32d855fdb9b296cc4a18dc951e7
 fetch(
@@ -23,4 +23,5 @@ fetch(
     `;
 
     description.innerHTML = seriesDescription;
-  });
+  })
+  .then(() => (loadingEl.style.display = "none"));

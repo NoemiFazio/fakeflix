@@ -11,6 +11,8 @@ const serieWrapper = document.querySelector(".popular-series-wrapper");
 serieWrapper.appendChild(seriesCard);
 let series = [];
 
+const loadingEl = document.querySelector(".loading");
+
 fetch(BASE_URL)
   .then((res) => res.json())
   .then((data) => {
@@ -28,7 +30,8 @@ fetch(BASE_URL)
       })
       .join("");
     seriesCard.innerHTML = `${locandina}`;
-  });
+  })
+  .then(() => (loadingEl.style.display = "none"));
 
 //   style="visibility: hidden;"
 
@@ -38,3 +41,6 @@ fetch(BASE_URL)
 //     console.log("stai cliccando sulla img");
 //   }
 // });
+fetch(
+  "https://api.themoviedb.org/3/discover/tv?api_key=7a90f646e8bc9debee71e38dca588197&sort_by=popularity.desc"
+);
