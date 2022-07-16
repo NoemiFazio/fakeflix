@@ -22,7 +22,7 @@ fetch(BASE_URL)
     const locandina = series
       .map((el) => {
         console.log(el);
-        return `<a class="card" href="http://127.0.0.1:5500/tv-series.html?id=${el.id}"  >
+        return `<a class="card" href="./tv-series.html?id=${el.id}"  >
         <img id"${el.id}" src="${imgFirstLinkPart}${el.poster_path}">
         <h5 class"name"  >${el.name}</h5>
          

@@ -1,5 +1,7 @@
 const movieId = window.location.search.substr(1).slice(3);
-console.log(movieId);
+console.log(window.location.search); //prende la parte del link dal ? in poi
+console.log(window.location.search.substr(1)); // id=12345
+console.log(movieId); //12345
 
 const imgFirstLinkPart = "https://image.tmdb.org/t/p/w500";
 const loadingEl = document.querySelector(".loading");
